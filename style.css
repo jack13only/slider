@@ -1,0 +1,109 @@
+html {
+    height: 100%; 
+    width: 100;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.left {
+    width: 35%;
+    height: 100%;
+    background: chartreuse;
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right {
+    width: 65%;
+    height: 100%;
+    background-color: rgb(0, 140, 255) ;
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 35%;
+}
+
+.left > div, .right > div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-autumn {
+    background-image: url(./assets/img/autumn.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.right-summer {
+    background-image: url(./assets/img/summer.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.right-spring {
+    background-image: url(./assets/img/spring.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.right-winter {
+    background-image: url(./assets/img/winter.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.left-winter {
+    background: rgb(5, 176, 255);
+}
+
+.left-spring {
+    background: rgb(21, 255, 0);
+}
+
+.left-summer {
+    background: rgb(255, 29, 29);
+}
+
+.left-autumn {
+    background: rgb(255, 155, 5);
+}
+
+.left-winter, .left-autumn, .left-spring, .left-summer, 
+.right-autumn, .right-spring, .right-summer, .right-winter {
+    width: 100%;
+    height: 100%;
+}
+
+.container .controls button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+.down-button {
+    transform: translateX(-100%);
+}
+
+.up-button {
+    transform: translateY(-100%);
+}
